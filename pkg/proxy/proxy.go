@@ -717,7 +717,7 @@ func (s *Proxy) allocatePort() (uint16, error) {
 		for _, item := range clusters.Items {
 			if item.Spec.Connection.Type == v1alpha1.ConnectionTypeProxy &&
 				item.Spec.Connection.KubernetesAPIServerPort != 0 &&
-				item.Spec.Connection.KubeSphereAPIServerPort == port {
+				item.Spec.Connection.KubernetesAPIServerPort == port {
 				collision = true
 				break
 			}
